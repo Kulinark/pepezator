@@ -55,7 +55,7 @@ def process_input_image(input_file_path):
 
     output_files = []
     for face_landmarks in landmarks_detector.get_landmarks(input_file_path):
-        output_image = image_align(input_image, face_landmarks, 256)
+        output_image = image_align(input_image, face_landmarks, 512)
         output_file_path = f'pictures/{uuid4()}.jpeg'
         output_image.save(output_file_path, 'jpeg')
         output_files.append(output_file_path)
